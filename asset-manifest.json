@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/daily-search-app/static/css/main.f15f2d4b.css",
-    "main.js": "/daily-search-app/static/js/main.b1212f6c.js",
+    "main.css": "/daily-search-app/static/css/main.085fc9d0.css",
+    "main.js": "/daily-search-app/static/js/main.f761d733.js",
     "static/js/453.2335d5bd.chunk.js": "/daily-search-app/static/js/453.2335d5bd.chunk.js",
     "static/media/gpt-logo.png": "/daily-search-app/static/media/gpt-logo.fdb25400e1ae2dafa4be.png",
     "static/media/google-logo.png": "/daily-search-app/static/media/google-logo.39c52b1bcccb20569aa4.png",
     "static/media/logo.svg": "/daily-search-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/daily-search-app/index.html",
-    "main.f15f2d4b.css.map": "/daily-search-app/static/css/main.f15f2d4b.css.map",
-    "main.b1212f6c.js.map": "/daily-search-app/static/js/main.b1212f6c.js.map",
+    "main.085fc9d0.css.map": "/daily-search-app/static/css/main.085fc9d0.css.map",
+    "main.f761d733.js.map": "/daily-search-app/static/js/main.f761d733.js.map",
     "453.2335d5bd.chunk.js.map": "/daily-search-app/static/js/453.2335d5bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f15f2d4b.css",
-    "static/js/main.b1212f6c.js"
+    "static/css/main.085fc9d0.css",
+    "static/js/main.f761d733.js"
   ]
 }
