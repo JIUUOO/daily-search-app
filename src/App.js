@@ -9,7 +9,10 @@ import axios from "axios";
 import SearchBox from "./components/SearchBox";
 
 function App() {
-  const [word, setWord] = useState("");
+  const [wordGoogle, setWordGoogle] = useState("");
+  const [wordYoutube, setWordYoutube] = useState("");
+  const [wordNaver, setWordNaver] = useState("");
+  const [wordGpt, setWordGpt] = useState("");
 
   const words = [
     "ability",
@@ -391,7 +394,7 @@ function App() {
   // 0 ~ 374
   console.log(Math.floor(Math.random() * 375) + 1);
 
-  const getWord = async function (wd) {
+  const getWord = async function (wd, set) {
     // const wd = "devoid";
     const apiUrl =
       "https://www.dictionaryapi.com/api/v3/references/thesaurus/json/" +
@@ -404,16 +407,28 @@ function App() {
         const wdDef = response.data[0].shortdef[0];
         console.log(wd + " " + response.data[0].shortdef[0]);
 
-        await setWord(wd + " – " + wdDef);
+        await set(wd + " – " + wdDef);
       })
       .catch(function (error) {
         console.log(error);
       });
   };
 
-  if (word == "") {
+  if (wordGoogle == "") {
     const rand = Math.floor(Math.random() * 375) + 1;
-    getWord(words[rand]);
+    getWord(words[rand], setWordGoogle);
+  }
+  if (wordYoutube == "") {
+    const rand = Math.floor(Math.random() * 375) + 1;
+    getWord(words[rand], setWordYoutube);
+  }
+  if (wordNaver == "") {
+    const rand = Math.floor(Math.random() * 375) + 1;
+    getWord(words[rand], setWordNaver);
+  }
+  if (wordGpt == "") {
+    const rand = Math.floor(Math.random() * 375) + 1;
+    getWord(words[rand], setWordGpt);
   }
 
   return (
@@ -423,29 +438,30 @@ function App() {
         <span className="text-sm">은은한 영단어와 함께</span>
       </h1>
       {/* <!-- Google 검색 --> */}
+
       <SearchBox
         logoImg={googleLogo}
         engine="google"
         url="https://www.google.com/search?q="
-        placeholder={word}
+        placeholder={wordGoogle}
       />
       <SearchBox
         logoImg={youtubeLogo}
         engine="youtube"
         url="https://www.youtube.com/results?search_query="
-        placeholder={word}
+        placeholder={wordYoutube}
       />
       <SearchBox
         logoImg={naverLogo}
         engine="naver"
         url="https://search.naver.com/search.naver?query="
-        placeholder={word}
+        placeholder={wordNaver}
       />
       <SearchBox
         logoImg={gptLogo}
         engine="gpt"
         url="https://www.chatgpt.com/?q="
-        placeholder={word}
+        placeholder={wordGpt}
       />
     </div>
   );

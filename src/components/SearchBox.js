@@ -13,19 +13,21 @@ export default function SearchBox(props) {
   };
 
   return (
-    <form className="search-form" onSubmit={searchAndRedirect}>
-      <img className="logo" src={props.logoImg}></img>
-      <input
-        className="search-box"
-        type="text"
-        id={props.engine}
-        name={props.engine}
-        placeholder={props.placeholder}
-        required
-      />
-      <button className="search-button" type="submit">
-        Search
-      </button>
-    </form>
+    <div className="form-wrapper">
+      <form className="search-form" onSubmit={searchAndRedirect}>
+        <img className="logo" src={props.logoImg}></img>
+        <input
+          className="search-box"
+          type="text"
+          id={props.engine}
+          name={props.engine}
+          placeholder={props.placeholder}
+          required
+        />
+        <button className="search-button" type="submit">
+          Search
+        </button>
+      </form>
+    </div>
   );
 }
