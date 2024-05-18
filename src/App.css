@@ -59,8 +59,11 @@ h1 {
 }
 
 .search-box:hover::placeholder {
-  background-color: yellow;
   color: black;
+}
+
+.search-box:hover {
+  background-color: yellow;
 }
 
 .search-button {
