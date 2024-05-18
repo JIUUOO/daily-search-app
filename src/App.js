@@ -4,7 +4,7 @@ import youtubeLogo from "./images/youtube-logo.png";
 import naverLogo from "./images/naver-logo.png";
 import gptLogo from "./images/gpt-logo.png";
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import SearchBox from "./components/SearchBox";
 
@@ -391,8 +391,6 @@ function App() {
     "draw",
     "drawer",
   ];
-  // 0 ~ 374
-  console.log(Math.floor(Math.random() * 375) + 1);
 
   const getWord = async function (wd, set) {
     // const wd = "devoid";
@@ -405,7 +403,7 @@ function App() {
       .get(apiUrl)
       .then(async function (response) {
         const wdDef = response.data[0].shortdef[0];
-        console.log(wd + " " + response.data[0].shortdef[0]);
+        // console.log(wd + " " + response.data[0].shortdef[0]);
 
         await set(wd + " – " + wdDef);
       })
@@ -414,22 +412,22 @@ function App() {
       });
   };
 
-  if (wordGoogle == "") {
+  useEffect(() => {
     const rand = Math.floor(Math.random() * 375) + 1;
     getWord(words[rand], setWordGoogle);
-  }
-  if (wordYoutube == "") {
+  }, []);
+  useEffect(() => {
     const rand = Math.floor(Math.random() * 375) + 1;
     getWord(words[rand], setWordYoutube);
-  }
-  if (wordNaver == "") {
+  }, []);
+  useEffect(() => {
     const rand = Math.floor(Math.random() * 375) + 1;
     getWord(words[rand], setWordNaver);
-  }
-  if (wordGpt == "") {
+  }, []);
+  useEffect(() => {
     const rand = Math.floor(Math.random() * 375) + 1;
     getWord(words[rand], setWordGpt);
-  }
+  }, []);
 
   return (
     <div className="App">
