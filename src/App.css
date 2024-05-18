@@ -32,13 +32,13 @@ h1 {
 
   padding: 0 1rem;
 
-  object-fit: cover;
+  object-fit: scale-down;
 }
 
 .search-form {
   display: flex;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   align-items: center;
 }
 
@@ -50,11 +50,17 @@ h1 {
 
   height: 3rem;
   width: 40rem;
+  border-width: 0.15rem;
   border-radius: 4rem;
 
   padding: 0.75rem 0.5rem;
   font-size: 1rem;
   font-weight: 900;
+}
+
+.search-box:hover::placeholder {
+  background-color: yellow;
+  color: black;
 }
 
 .search-button {
@@ -63,9 +69,18 @@ h1 {
 
   margin: 0 0.5rem;
 
-  border-width: 0.1rem;
+  border-width: 0.15rem;
   border-radius: 2rem;
   background-color: white;
+
+  text-align: center;
+  padding: auto;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.search-button:hover {
+  background-color: rgb(194, 194, 194);
 }
 
 @media (max-width: 450px) {

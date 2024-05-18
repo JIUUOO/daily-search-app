@@ -25,7 +25,7 @@ export default function SearchBox(props) {
           placeholder={props.placeholder}
         ></textarea>
         <button className="search-button" type="submit">
-          Search
+          검색
         </button>
       </form>
     </div>
