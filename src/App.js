@@ -12,12 +12,12 @@ function App() {
           <button>Search</button>
         </form>
         <form>
-          Searh on Google!
+          Searh on Naver!
           <input placeholder={Word}></input>
           <button>Search</button>
         </form>
         <form>
-          Searh on Google!
+          Searh on Youtube!
           <input placeholder={Word}></input>
           <button>Search</button>
         </form>
