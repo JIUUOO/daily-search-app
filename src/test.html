@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search and Redirect</title>
+    <script>
+      // searchAndRedirect 함수는 검색 쿼리를 읽고 선택된 검색 엔진에 따라 URL을 생성하여 이동합니다.
+      function searchAndRedirect() {
+        // 입력된 검색 쿼리를 가져옵니다.
+        var query = document.getElementById("searchQuery").value;
+        // 검색 쿼리가 입력되었는지 확인합니다.
+        if (query) {
+          // 선택된 검색 엔진의 값을 가져옵니다.
+          var searchEngine = document.getElementById("searchEngine").value;
+          var searchUrl;
+
+          // 선택된 검색 엔진에 따라 검색 URL을 생성합니다.
+          if (searchEngine === "google") {
+            searchUrl =
+              "https://www.google.com/search?q=" + encodeURIComponent(query);
+          } else if (searchEngine === "bing") {
+            searchUrl =
+              "https://www.bing.com/search?q=" + encodeURIComponent(query);
+          } else if (searchEngine === "naver") {
+            searchUrl =
+              "https://search.naver.com/search.naver?query=" +
+              encodeURIComponent(query);
+          }
+
+          // 브라우저를 해당 URL로 리디렉션합니다.
+          window.location.href = searchUrl;
+        } else {
+          // 검색 쿼리가 입력되지 않은 경우 경고 메시지를 표시합니다.
+          alert("Please enter a search query.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    
+    </form>
+  </body>
+</html>
