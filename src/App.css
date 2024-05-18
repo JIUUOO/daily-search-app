@@ -68,7 +68,7 @@ h1 {
 }
 
 .search-box:hover {
-  background-color: chartreuse;
+  background-color: lawngreen;
 }
 
 .search-button {
@@ -88,7 +88,7 @@ h1 {
 }
 
 .search-button:hover {
-  background-color: rgb(194, 194, 194);
+  background-color: lime;
 }
 
 @media (max-width: 450px) {
