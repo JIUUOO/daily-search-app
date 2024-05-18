@@ -5,40 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search and Redirect</title>
     <script>
-      // searchAndRedirect 함수는 검색 쿼리를 읽고 선택된 검색 엔진에 따라 URL을 생성하여 이동합니다.
-      function searchAndRedirect() {
-        // 입력된 검색 쿼리를 가져옵니다.
-        var query = document.getElementById("searchQuery").value;
+      // 검색 엔진에 따라 검색 URL을 생성하고 새 창에서 리디렉션하는 함수입니다.
+      function searchAndRedirect(searchEngine) {
+        // 검색 쿼리를 가져옵니다.
+        var query = document.getElementById(searchEngine + "Query").value;
         // 검색 쿼리가 입력되었는지 확인합니다.
         if (query) {
-          // 선택된 검색 엔진의 값을 가져옵니다.
-          var searchEngine = document.getElementById("searchEngine").value;
           var searchUrl;
-
-          // 선택된 검색 엔진에 따라 검색 URL을 생성합니다.
+          // 검색 엔진에 따라 검색 URL을 생성합니다.
           if (searchEngine === "google") {
             searchUrl =
               "https://www.google.com/search?q=" + encodeURIComponent(query);
-          } else if (searchEngine === "bing") {
+          } else if (searchEngine === "youtube") {
             searchUrl =
-              "https://www.bing.com/search?q=" + encodeURIComponent(query);
+              "https://www.youtube.com/results?search_query=" +
+              encodeURIComponent(query);
           } else if (searchEngine === "naver") {
             searchUrl =
               "https://search.naver.com/search.naver?query=" +
               encodeURIComponent(query);
+          } else if (searchEngine === "gpt") {
+            searchUrl =
+              "https://www.chatgpt.com/?q=" + encodeURIComponent(query);
+          } else if (searchEngine === "papago") {
+            searchUrl =
+              "https://papago.naver.com/?sk=auto&tk=ko&st=" +
+              encodeURIComponent(query);
           }
-
-          // 브라우저를 해당 URL로 리디렉션합니다.
-          window.location.href = searchUrl;
+          // 새 창에서 해당 URL을 엽니다.
+          window.open(searchUrl, "_blank");
         } else {
           // 검색 쿼리가 입력되지 않은 경우 경고 메시지를 표시합니다.
           alert("Please enter a search query.");
         }
       }
     </script>
+    <style>
+      body {
+        text-align: center;
+      }
+      .search-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+      .search-form img {
+        margin-right: 10px;
+      }
+      .search-form button {
+        background-color: #ffd400;
+        color: black;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      .search-form button:hover {
+        background-color: darkgreen;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    
+    <h1>
+      골라서 검색해요 <span style="font-size: 50%">은은한 영단어와 함께</span>
+    </h1>
+
+    <!-- Google 검색 -->
+    <form
+      class="search-form"
+      onsubmit="event.preventDefault(); searchAndRedirect('google');"
+    >
+      <img
+        src="./google-logo.png"
+        alt="Google Logo"
+        style="width: 20px; height: 20px"
+      />
+      <input
+        type="text"
+        id="googleQuery"
+        name="googleQuery"
+        placeholder="Enter your search query"
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- YouTube 검색 -->
+    <form
+      class="search-form"
+      onsubmit="event.preventDefault(); searchAndRedirect('youtube');"
+    >
+      <img
+        src="./youtube-logo.png"
+        alt="YouTube Logo"
+        style="width: 20px; height: 20px"
+      />
+      <input
+        type="text"
+        id="youtubeQuery"
+        name="youtubeQuery"
+        placeholder="Enter your search query"
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Naver 검색 -->
+    <form
+      class="search-form"
+      onsubmit="event.preventDefault(); searchAndRedirect('naver');"
+    >
+      <img
+        src="./naver-logo.png"
+        alt="Naver Logo"
+        style="width: 20px; height: 20px"
+      />
+      <input
+        type="text"
+        id="naverQuery"
+        name="naverQuery"
+        placeholder="Enter your search query"
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- GPT 검색 -->
+    <form
+      class="search-form"
+      onsubmit="event.preventDefault(); searchAndRedirect('gpt');"
+    >
+      <img
+        src="./gpt-logo.png"
+        alt="GPT Logo"
+        style="width: 20px; height: 20px"
+      />
+      <input
+        type="text"
+        id="gptQuery"
+        name="gptQuery"
+        placeholder="Enter your search query"
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <form
+      class="search-form"
+      onsubmit="event.preventDefault(); searchAndRedirect('papago');"
+    >
+      <img
+        src="./papago-logo.png"
+        alt="Papago Logo"
+        style="width: 20px; height: 20px"
+      />
+      <input
+        type="text"
+        id="papagoQuery"
+        name="papagoQuery"
+        placeholder="Enter your text to translate"
+        required
+      />
+      <button type="submit">Translate</button>
     </form>
   </body>
 </html>
