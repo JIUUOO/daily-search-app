@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/daily-search-app/static/css/main.9df17f6e.css",
+    "main.css": "/daily-search-app/static/css/main.175a52c1.css",
     "main.js": "/daily-search-app/static/js/main.b0f44030.js",
     "static/js/453.2335d5bd.chunk.js": "/daily-search-app/static/js/453.2335d5bd.chunk.js",
     "static/media/gpt-logo.png": "/daily-search-app/static/media/gpt-logo.fdb25400e1ae2dafa4be.png",
     "static/media/google-logo.png": "/daily-search-app/static/media/google-logo.39c52b1bcccb20569aa4.png",
     "static/media/logo.svg": "/daily-search-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/daily-search-app/index.html",
-    "main.9df17f6e.css.map": "/daily-search-app/static/css/main.9df17f6e.css.map",
+    "main.175a52c1.css.map": "/daily-search-app/static/css/main.175a52c1.css.map",
     "main.b0f44030.js.map": "/daily-search-app/static/js/main.b0f44030.js.map",
     "453.2335d5bd.chunk.js.map": "/daily-search-app/static/js/453.2335d5bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9df17f6e.css",
+    "static/css/main.175a52c1.css",
     "static/js/main.b0f44030.js"
   ]
 }
