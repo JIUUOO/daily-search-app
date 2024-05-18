@@ -433,10 +433,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>
-        영단어도 익히고 검색도 해요{" "}
-        <span className="text-sm">은은한 영단어와 함께</span>
-      </h1>
+      <h1>영단어도 익히고 검색도 해요</h1>
       {/* <!-- Google 검색 --> */}
 
       <SearchBox
