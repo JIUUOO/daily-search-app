@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 
 function App() {
-  const [word, setWord] = useState("hello world");
+  const [word, setWord] = useState("");
 
   const words = [
     "ability",
@@ -437,9 +437,9 @@ function App() {
       });
   };
 
-  if (word == "hello world") {
+  if (word == "") {
     const rand = Math.floor(Math.random() * 375) + 1;
-    setWord(getWord(words[rand]));
+    getWord(words[rand]);
   }
 
   return (
