@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 
 body {
-  background-color: rgb(253, 221, 226);
+  background: linear-gradient(
+    90deg,
+    rgba(103, 255, 127, 0.774969362745098) 0%,
+    rgba(173, 255, 84, 0.7637648809523809) 50%,
+    rgba(183, 255, 0, 0.774969362745098) 100%
+  );
 
   font-family: "Black Han Sans", sans-serif;
 }
@@ -63,7 +68,7 @@ h1 {
 }
 
 .search-box:hover {
-  background-color: yellow;
+  background-color: chartreuse;
 }
 
 .search-button {
