@@ -413,19 +413,19 @@ function App() {
   };
 
   useEffect(() => {
-    const rand = Math.floor(Math.random() * 375) + 1;
+    const rand = Math.floor(Math.random() * 375);
     getWord(words[rand], setWordGoogle);
   }, []);
   useEffect(() => {
-    const rand = Math.floor(Math.random() * 375) + 1;
+    const rand = Math.floor(Math.random() * 375);
     getWord(words[rand], setWordYoutube);
   }, []);
   useEffect(() => {
-    const rand = Math.floor(Math.random() * 375) + 1;
+    const rand = Math.floor(Math.random() * 375);
     getWord(words[rand], setWordNaver);
   }, []);
   useEffect(() => {
-    const rand = Math.floor(Math.random() * 375) + 1;
+    const rand = Math.floor(Math.random() * 375);
     getWord(words[rand], setWordGpt);
   }, []);
 
