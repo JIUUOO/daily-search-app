@@ -432,7 +432,8 @@ function App() {
   return (
     <div className="App">
       <h1>영단어도 익히고 검색도 해요</h1>
-      {/* <!-- Google 검색 --> */}
+      <h3>혹시 모르는 단어가 나왔나요? 바로 검색를 누르세요!</h3>
+      <h3>단어 뜻이 너무 길다면 좌우 스크롤을 해보세요!</h3>
 
       <SearchBox
         logoImg={googleLogo}
@@ -458,6 +459,8 @@ function App() {
         url="https://www.chatgpt.com/?q="
         placeholder={wordGpt}
       />
+
+      <h3>pc 전용 웹이에요!</h3>
     </div>
   );
 }
